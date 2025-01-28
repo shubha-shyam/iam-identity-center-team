@@ -21,5 +21,5 @@ TEAM_ADMIN_GROUP="AWS Access"
 TEAM_AUDITOR_GROUP="TEAM-Auditor"
 TAGS="Team=platform"
 CLOUDTRAIL_AUDIT_LOGS=arn:aws:cloudtrail:eu-west-1:302567802819:eventdatastore/05ec73a3-0978-4c26-9baa-6d4bcfa07881
-SECRET_NAME=TEAM-Elevated-Access
+SECRET_NAME=team-access
 UI_DOMAIN=team.amboss.in
