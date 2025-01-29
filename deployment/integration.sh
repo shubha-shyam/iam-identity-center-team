@@ -34,6 +34,12 @@ amplifyAppId=`aws amplify list-apps --region $REGION --output json | jq -r '.app
 amplifyDomain=`aws amplify list-apps --region $REGION --output json | jq -r '.apps[] | select(.name=="TEAM-IDC-APP") | .defaultDomain'`
 amplifyDomain="main.$amplifyDomain"
 
+echo "Amplify App ID: $amplifyAppId"
+echo "Default Amplify Domain: $amplifyDomain"
+echo "Amplify Custom Domain: $amplifyCustomDomain"
+echo "Custom Domain Prefix: $amplifyCustomDomainPrefix"
+
+
 amplifyCustomDomains=`aws amplify list-domain-associations --region $REGION --app-id $amplifyAppId --output json`
 amplifyCustomDomain=`echo $amplifyCustomDomains | jq -r 'select(.domainAssociations | length > 0) | .domainAssociations[0].domainName'`
 
